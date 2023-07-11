@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,700&display=swap);
+@font-face {
+   font-family: "Fraunces 144pt";
+   src: url("../fonts/Fraunces144ptS000-SemiBold.woff2") format("woff2"),
+      url("../fonts/Fraunces144ptS000-SemiBold.woff") format("woff"),
+      url("../fonts/Fraunces144ptS000-SemiBold.ttf") format("truetype");
+}
+@import "_nullstyle.scss";
+
+body {
+   font-family: "Manrope", sans-serif;
+   // font-family: "Fraunces 144pt", serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 177.777778%; /* 32px/18 */
+   background-color: #fff;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+[class*="__container"] {
+   max-width: 1140px;
+   margin: 0 auto;
+   padding: 0 15px;
+   @media (max-width: 1199.9808px) {
+      max-width: 970px;
+   }
+   @media (max-width: 991.9808px) {
+      max-width: 750px;
+   }
+   @media (max-width: 767.9808px) {
+      max-width: none;
+   }
+}
+.page {
+   flex: 1 1 auto;
+}
+
+//========PAGES=========//
+.page {
+   &__main {
+      padding-top: 146px;
+      padding-bottom: 52px;
+      background-image: url(../img/bg/bg-violet.svg);
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      max-height: 730px;
+      width: 100%;
+      left: 0;
+      top: 0;
+   }
+}
+
+//========HEADER========//
+.header {
+   position: relative;
+   z-index: 3;   
+   &__body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 55px 0;
+   }
+   &__logo {
+      line-height: 0;
+   }
+   &__link {
+      color: #fff;
+      font-weight: 700;
+      line-height: 177.777778%; /* 32px/18 */
+      letter-spacing: -0.18px;
+      border-bottom: 3px solid #44ffa1;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         color: #44ffa1;
+      }
+   }
+}
+
+//=======PAGE_MAIN=======//
+.main {
+   &__title {
+      font-family: "Fraunces 144pt", serif;
+      max-width: 635px;
+      margin: 0 auto;
+      color: #fff;
+      text-align: center;
+      font-size: 80px;
+      font-weight: 600;
+      line-height: 100%; /* 80px/80 */
+      margin-bottom: 37px;
+      a {
+         display: inline-block;
+         color: inherit;
+         padding-bottom: 10px;
+         border-bottom: 3px solid #44ffa1;
+      }
+   }
+   &__button {
+      min-height: 60px;
+      max-width: 180px;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5px 32px;
+      font-family: Manrope;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 177.777778%; /* 32px/18 */
+      letter-spacing: -0.18px;
+      color: #24053e;
+      background-color: #44ffa1;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         color: #44ffa1;
+         border: 3px solid #44ffa1;
+         background-color: transparent;
+      }
+      margin-bottom: 50px;
+   }
+   &__image {
+      text-align: center;
+      img {
+         max-width: 100%;
+      }
+   }
+   &__decor {
+      &_left {
+         position: absolute;
+         top: 155px;
+         left: 0;
+      }
+      &_right {
+         position: absolute;
+         top: 315px;
+         right: 0;
+      }
+   }
+}
